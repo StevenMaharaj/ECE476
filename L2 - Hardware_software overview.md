@@ -1,0 +1,48 @@
+# Levels of abstraction
+![[Pasted image 20240301104624.png]]
+
+Hardware is controlled by manipulating value of registers. 
+1000 of registers so put together sdks - abstract to function
+
+
+# Internal Hardware
+**Datasheets**
+![[Pasted image 20240301105655.png]]
+
+**2 Processors** (Proc0 and Proc1)
+which are connected to SIO
+
+
+**SIO** - single cycle io
+Peripheral that cpus need low latency access to. 1 Cycle
+
+Hardware spin locks. can lock out from other cpu.
+
+![[Pasted image 20240301110240.png]]
+
+**DMA**
+32 bit transcation per cpu cycle
+
+RP2040 runs at 125Mz but you could try to over clock thing to 200Mz or 300 - 350Mz
+
+**Memory**
+SRAM organised in 6 blocks
+ROM boot loader
+
+
+**POI**
+Can write Assembly to directly manipulate the GIPOs
+
+# Mapping internal signals to GPIO
+
+For example GP0 could be 
+- RX pin for SPI channel 0
+- Data pin for I2C channel 0
+- TX pin for UARTO channel 0
+
+![[Pasted image 20240301111833.png]]
+
+# C SDK levels of Abstraction
+![[Pasted image 20240301112624.png]]
+
+30 mins
