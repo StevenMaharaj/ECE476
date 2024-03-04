@@ -44,5 +44,4 @@ For example GP0 could be
 
 # C SDK levels of Abstraction
 ![[Pasted image 20240301112624.png]]
-
 30 mins
